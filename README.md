@@ -1,0 +1,2 @@
+# instantMessage
+基于nodejs开发的web即时通讯，采用socket.io处理websocket的消息推送，前端使用layIM扩展成API方便使用
