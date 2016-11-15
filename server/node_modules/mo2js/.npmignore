@@ -1,0 +1,13 @@
+/node_modules
+
+# webstorm配置
+.idea
+
+# mac cache
+.DS_Store
+
+# 测试覆盖报告
+/testCoverageReporter
+
+# npm
+npm-debug.log

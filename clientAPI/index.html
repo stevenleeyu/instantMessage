@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="__COMMON_JS__/layui/css/layui.css">
+<script>
+function setUnreadCount(count){
+	if(count>9){
+		count = '9+';
+	}
+	$('#orderMsg i').text(count);
+}
+
+function setGroupUnreadCount(sessionUnread){
+	//console.log($('.qunUnreadNum').length);
+	$.each($('.qunUnreadNum'),function(){
+		var _sesionId = $(this).attr('qunId');
+		//_sesionId = '57c8f0aba0ea35c42646f300';
+		for(var i in sessionUnread){
+			if(_sesionId == sessionUnread[i].id){
+				$(this).text(sessionUnread[i].unreadNum);
+			}
+		}
+	});
+}
+//初始化回调函数，用于获取已加入会话
+/*
+ * group:[{
+ *			avatar:"http://filemanager.woordee.com/tx03.png"
+ *			groupname:"test"
+ *          id:"57c3a045ea7200a41f7301ac"
+ *          readNum:251
+ *          totalNum:251
+ *          unreadNum:0
+ * }]
+ *
+ ***********/
+function initCallbackHandler(group){
+    console.log(group);
+}
+/*
+ * 会话列表出现ajax分页时,获取分页的未读消息条数,需要在加载分页之后调用
+ * getUnreadMessage
+ */
+</script>
+<script type="text/javascript" src="__COMMON_JS__/layui/layui.js"></script>
+<script type="text/javascript" src="__COMMON_JS__/im/socket.io.js"></script>
+<script type="text/javascript" src="__COMMON_JS__/im/config.js"></script>
+<script type="text/javascript" src="__COMMON_JS__/im/chat.js"></script>

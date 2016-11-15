@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="history-body" >
+    <ul >
+        <%for(var i in historys){ %>
+        <%=historys[i].userInfo.username%>:<%=historys[i].content%>
+        <%}%>
+    </ul>
+</div>
+</body>
+</html>

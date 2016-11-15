@@ -1,0 +1,40 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>使用Nodejs实现实时推送MongoDB数据库最新信息到客户端</title>
+		<style>
+        dd,dt {
+            float:left;
+            margin:0;
+            padding:5px;
+            clear:both;
+            display:block;
+            width:100%;
+            }
+            dt {
+            background:#ddd;
+            }
+            time {
+            color:gray;
+            }
+        </style>
+    </head>
+    <body>
+        <time></time>
+		<message></message>
+        <div id="container">Loading ...</div>
+		<button id="cancel">注销</button>
+        <button id="openIM">打开聊天</button>
+        <div id="instantMessage" style="display:none;">
+            <div id="list"></div>
+            <textarea id="message"></textarea>
+            <button id="sendMessage">Send</button>
+            <button id="closeIM">Close</button>
+        </div>
+	<script src="./js/socket.io.js"></script>
+    <script src="./js/jquery-3.1.0.min.js"></script>
+	<script src="./js/cache.js"></script>
+	<script src="./js/config.js"></script>
+	<script src="./js/im.js"></script>
+    </body>
+</html>

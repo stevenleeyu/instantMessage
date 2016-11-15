@@ -1,0 +1,34 @@
+//注册用户
+POST http://127.0.0.1:88/user/create
+username=lxy&password=123456&nickname=
+
+//创建聊天室
+POST http://127.0.0.1:88/chat/create 
+username=lxy&sessname=test&nickname=
+return status:true sessId
+
+//加入聊天室
+POST http://127.0.0.1:88/chat/addSession
+lee 57dd01892a07b7f80c9cd6eb
+lxy 582a9734df7323101a6b2e11
+lvlu 57c3a062ea7200a41f7301b0
+username=lvlu&sessid=57e4b80f6d4aff8c021e2b70&nickname=lvlu
+
+//退出聊天室
+POST http://127.0.0.1:88/chat/kickSession
+lee 57c3a045ea7200a41f7301ac
+lxy 57c3a04cea7200a41f7301ae
+lvlu 57c3a062ea7200a41f7301b0
+username=lvlu&sessid=57c3a04cea7200a41f7301ae
+
+//发消息
+POST http://127.0.0.1:88/chat/send
+username=lee&sessid=57c3a045ea7200a41f7301ac&content=hello,iamlee
+username=lxy&sessid=57c3a045ea7200a41f7301ac&content=hello,iamlxy
+username=lvlu&sessid=57c3a045ea7200a41f7301ac&content=hello,iamlvlu
+
+//获取用户聊天室列表
+GET http://127.0.0.1:88/chat/sessList/:username
+
+//获取历史消息列表
+GET http://127.0.0.1:88/chat/history/:id
